@@ -1,0 +1,7 @@
+// Sofia (SofiaFollower.esp): lines she has no file for are spoken with the first of these voices that has one.
+// Change the order or the names to taste; any voice type EditorID works (FemaleSultry, FemaleCommander, ...).
+{
+	"voiceTypes": {
+		"JJSofiaVoiceType": [ "FemaleYoungEager" ]
+	}
+}

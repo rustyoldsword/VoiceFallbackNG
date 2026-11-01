@@ -1,0 +1,22 @@
+// Voice Fallback NG rules. Every *.json in this folder is read (comments allowed), in name order; for the same
+// voice type the last file wins. A character mod can ship its own file here, e.g. "SKSE\Plugins\VoiceFallbackNG\Sofia.json".
+// "voiceTypes": voice type EditorID ->
+//                 [ "FemaleCommander", ... ]  fallback voices, best first (handled even when automatic handling is off)
+//                 true                        handled with the default chain from the ini
+//                 false                       not handled: the character keeps its own voice and its silence, as
+//                                             without this mod (still listed in the menu, where it can be turned on)
+//                 { "fallbacks": [ ... ], "enabled": false }
+//                                             its own chain, but off until turned on in the menu; "enabled" may be
+//                                             left out (= true)
+// "exclude":    voice types that must never be handled nor listed (for example a creature voice from a mod).
+// Switches made in the menu (Voice Fallback > Characters) are saved in VoiceFallbackNG.ini and win over these rules.
+{
+	"voiceTypes": {
+		"ExampleUniqueVoiceType": [ "FemaleCommander", "FemaleNord", "FemaleEvenToned" ],
+		"ExampleVeryDifferentVoiceType": false,
+		"ExampleOptInVoiceType": { "fallbacks": [ "FemaleDarkElf", "FemaleEvenToned" ], "enabled": false }
+	},
+	"exclude": [
+		"ExampleCreatureVoiceType"
+	]
+}

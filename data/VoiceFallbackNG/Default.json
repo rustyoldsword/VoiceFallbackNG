@@ -1,0 +1,8 @@
+// Voice types that are not characters with lines of their own and must never borrow other voices.
+{
+	"exclude": [
+		"SexLabVoiceF",
+		"SexLabVoiceM",
+		"PW_HorseVoiceType"
+	]
+}
